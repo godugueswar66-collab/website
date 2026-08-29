@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Java Keywords & OOP Explorer - Interactive reference guide for Java's 50 keywords, OOP concepts, code examples, and runnable demo program.">
+    <title>Java Keywords & OOP Explorer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Prism Syntax Highlighting Theme CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100">
+
+    <!-- Fixed Navigation Bar -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container-fluid px-lg-4">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <i class="bi bi-filetype-java text-danger fs-2 me-2"></i>
+                <span class="fw-bold tracking-tight">Java & OOP <span class="text-java">Explorer</span></span>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4 gap-lg-1">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#about"><i class="bi bi-info-circle me-1"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#keywords-reference"><i class="bi bi-table me-1"></i> Keywords Table</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#keyword-examples"><i class="bi bi-code-square me-1"></i> Examples (1-50)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#full-demo"><i class="bi bi-terminal me-1"></i> Full Demo Program</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#core-concepts"><i class="bi bi-cpu me-1"></i> Basic Concepts</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2">
+                    <span class="badge hero-badge font-mono py-2 px-3 d-none d-sm-inline-block">50 Keywords</span>
+                    
+                    <button id="themeToggle" class="btn btn-outline-secondary rounded-pill px-3 py-1 d-flex align-items-center gap-2" title="Toggle Light/Dark Theme">
+                        <i id="themeIcon" class="bi bi-sun-fill text-warning"></i>
+                        <span class="d-none d-md-inline small font-mono">Theme</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main id="home">
+
+        <!-- Hero Section -->
+        <section class="bg-java-hero py-5 mb-5 border-bottom">
+            <div class="container py-4 py-lg-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill hero-badge mb-3 font-mono small">
+                            <i class="bi bi-journal-code"></i> Comprehensive Java Reference & Documentation
+                        </div>
+                        <h1 class="display-4 fw-extrabold mb-3">Master All <span class="text-java">50 Java Keywords</span> & OOP Concepts</h1>
+                        <p class="lead text-body-secondary mb-4">
+                            An interactive developer explorer featuring complete definitions, 50 runnable code examples, a combined master program with terminal output, and 10 core Object-Oriented Programming concepts.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#keywords-reference" class="btn btn-danger btn-lg px-4 py-2 font-mono">
+                                <i class="bi bi-search me-2"></i> Search Keywords
+                            </a>
+                            <a href="#full-demo" class="btn btn-outline-secondary btn-lg px-4 py-2 font-mono">
+                                <i class="bi bi-play-circle me-2"></i> View Full Demo Program
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-none d-lg-block text-center">
+                        <div class="p-4 rounded-4 bg-java-gradient border shadow-lg text-start">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-file-code text-danger fs-3 me-2"></i>
+                                <span class="fw-bold font-mono text-light">JavaKeywordsDemo.java</span>
+                            </div>
+                            <pre class="m-0 text-success font-mono small opacity-75"><code>public class JavaKeywordsDemo {
+    public static void main(String[] args) {
+        // 50 Keywords demonstrated
+        System.out.println("Java Explorer");
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: About / Overview -->
+        <section id="about" class="container py-4 mb-5">
+            <h2 class="section-title fw-bold"><i class="bi bi-info-circle text-danger me-2"></i> About Java, OOPs & JAVAC</h2>
+            <p class="text-body-secondary mb-4">Core introductory concepts sourced directly from verbatim definitions.</p>
+
+            <div class="row g-4">
+                <!-- About OOPs -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card custom-card hover-lift h-100 p-4">
+                        <div class="icon-box bg-danger bg-opacity-10 text-danger mb-3">
+                            <i class="bi bi-diagram-3-fill"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2">About Oops</h4>
+                        <p class="text-body-secondary">
+                            Oops is also known as the ObjectOrientedProgramming language used in java.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- About JAVAC -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card custom-card hover-lift h-100 p-4">
+                        <div class="icon-box bg-warning bg-opacity-10 text-warning mb-3">
+                            <i class="bi bi-cpu-fill"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2">About JAVAC</h4>
+                        <p class="text-body-secondary">
+                            Javac is used to compile the java program file to mission understandable code.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- About Java Overview -->
+                <div class="col-md-12 col-lg-4">
+                    <div class="card custom-card hover-lift h-100 p-4">
+                        <div class="icon-box bg-success bg-opacity-10 text-success mb-3">
+                            <i class="bi bi-globe2"></i>
+                        </div>
+                        <h4 class="fw-bold mb-2">About Java</h4>
+                        <ul class="list-unstyled text-body-secondary mb-0 small">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Java is high level language.</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>It is popularly used in world wide.</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>It's a platform independent in any Operating System.</li>
+                            <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>It is developed by <strong>JamesGosling</strong> at <strong>SUNMICROSYSTEM</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Java Use Cases Breakdown -->
+            <div class="card custom-card p-4 mt-4 bg-java-gradient text-light">
+                <h4 class="fw-bold mb-3"><i class="bi bi-app-indicator text-danger me-2"></i> Major Use Cases of Java Applications</h4>
+                <p class="opacity-75 mb-4">Its applications majorly used in 5 types. They are:</p>
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="p-3 rounded bg-white bg-opacity-10 h-100">
+                            <h6 class="fw-bold text-danger"><i class="bi bi-window me-2"></i> Web Applications</h6>
+                            <p class="small mb-0 opacity-75">like : Netflix , Amazon , etc…</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="p-3 rounded bg-white bg-opacity-10 h-100">
+                            <h6 class="fw-bold text-warning"><i class="bi bi-database me-2"></i> Big Data Technology</h6>
+                            <p class="small mb-0 opacity-75">like: Quantum Computing, vedios, audios, etc…</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="p-3 rounded bg-white bg-opacity-10 h-100">
+                            <h6 class="fw-bold text-info"><i class="bi bi-phone me-2"></i> Mobile Applications</h6>
+                            <p class="small mb-0 opacity-75">like: Java has served as the back bone for mobile devices particularly with in Andriod O.S.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="p-3 rounded bg-white bg-opacity-10 h-100">
+                            <h6 class="fw-bold text-success"><i class="bi bi-bank me-2"></i> Enterprise & Financial</h6>
+                            <p class="small mb-0 opacity-75">like: it is used mainly in security ,privacy/banks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Keywords Reference Table -->
+        <section id="keywords-reference" class="container py-4 mb-5">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
+                <div>
+                    <h2 class="section-title fw-bold mb-1"><i class="bi bi-table text-danger me-2"></i> 50 Java Keywords Reference</h2>
+                    <p class="text-body-secondary mb-0">Searchable and filterable reference list of all 50 reserved keywords.</p>
+                </div>
+                <div class="mt-3 mt-md-0">
+                    <span id="tableCountBadge" class="badge bg-danger font-mono fs-6 py-2 px-3">50 keywords found</span>
+                </div>
+            </div>
+
+            <!-- Search Bar & Filters -->
+            <div class="card custom-card p-3 mb-4">
+                <div class="row g-3 align-items-center">
+                    <div class="col-md-6">
+                        <div class="search-container">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="keywordSearchInput" class="form-control search-input" placeholder="Search by keyword name or definition (e.g. assert, byte, loop)...">
+                            <button id="clearSearchBtn" class="clear-search-btn" title="Clear Search"><i class="bi bi-x-circle-fill"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex flex-wrap gap-2 justify-content-md-end" id="categoryFilterPills">
+                            <span class="badge bg-secondary bg-opacity-25 text-body border pill-filter active" data-category="ALL">All</span>
+                            <span class="badge bg-secondary bg-opacity-25 text-body border pill-filter" data-category="Primitive Data Types">Data Types</span>
+                            <span class="badge bg-secondary bg-opacity-25 text-body border pill-filter" data-category="Control Flow & Loops">Control Flow</span>
+                            <span class="badge bg-secondary bg-opacity-25 text-body border pill-filter" data-category="OOP & Declarations">OOP</span>
+                            <span class="badge bg-secondary bg-opacity-25 text-body border pill-filter" data-category="Exception Handling & Debugging">Exceptions</span>
+                            <span class="badge bg-secondary bg-opacity-25 text-body border pill-filter" data-category="Access Modifiers">Modifiers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reference Table -->
+            <div class="table-responsive card custom-card shadow-sm">
+                <table class="table table-hover table-custom mb-0 align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th style="width: 50px;">#</th>
+                            <th style="width: 140px;">Keyword</th>
+                            <th style="width: 200px;">Category</th>
+                            <th>Definition</th>
+                            <th style="width: 120px;" class="text-end">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="keywordsTableBody">
+                        <!-- Dynamic Rows injected via script.js -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 3: Individual Keyword Code Examples -->
+        <section id="keyword-examples" class="container py-4 mb-5">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
+                <div>
+                    <h2 class="section-title fw-bold mb-1"><i class="bi bi-code-square text-danger me-2"></i> 50 Keyword Code Examples</h2>
+                    <p class="text-body-secondary mb-0">Minimal runnable Java code snippet for every keyword (Numbered 1–50).</p>
+                </div>
+            </div>
+
+            <!-- Accordion Container -->
+            <div class="accordion" id="keywordsAccordion">
+                <!-- Dynamic Accordion Items injected via script.js -->
+            </div>
+        </section>
+
+        <!-- Section 4: Full Combined Demo Program -->
+        <section id="full-demo" class="container py-4 mb-5">
+            <div class="mb-4">
+                <h2 class="section-title fw-bold mb-1"><i class="bi bi-terminal-fill text-danger me-2"></i> Master Combined Program & Output</h2>
+                <p class="text-body-secondary mb-0">A single comprehensive Java class (<code>JavaKeywordsDemo.java</code>) incorporating all 50 keywords together, followed by its complete console output.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Master Code Class -->
+                <div class="col-lg-12">
+                    <div class="card custom-card p-0 shadow-lg">
+                        <div class="card-header bg-dark text-light d-flex justify-content-between align-items-center py-3 px-4">
+                            <span class="font-mono fw-bold text-danger"><i class="bi bi-file-earmark-code me-2"></i>JavaKeywordsDemo.java</span>
+                            <button class="btn btn-copy" onclick="copyCode(this, 'fullDemoCode')">
+                                <i class="bi bi-clipboard me-1"></i> Copy Master Program
+                            </button>
+                        </div>
+                        <div class="code-block-wrapper border-0 rounded-0">
+                            <pre><code id="fullDemoCode" class="language-java"></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Verbatim Console Output -->
+                <div class="col-lg-12">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                            <span class="ms-2 font-mono text-muted small">Terminal Console Output</span>
+                            <button class="btn btn-sm btn-copy ms-auto py-1 px-2" onclick="copyCode(this, 'fullDemoOutput')">
+                                <i class="bi bi-clipboard me-1"></i> Copy Console Output
+                            </button>
+                        </div>
+                        <pre id="fullDemoOutput" class="terminal-body m-0"></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Basic Concepts in Java -->
+        <section id="core-concepts" class="container py-4 mb-5">
+            <div class="mb-4">
+                <h2 class="section-title fw-bold mb-1"><i class="bi bi-cpu text-danger me-2"></i> Basic Concepts in Java (10 Core OOP Principles)</h2>
+                <p class="text-body-secondary mb-0">There are 10 basic concepts in Java listed in the curriculum reference.</p>
+            </div>
+
+            <!-- Card Grid (2-5 columns responsive) -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3 mb-4">
+                <div class="col">
+                    <div class="card custom-card hover-lift h-100 p-3 text-center">
+                        <div class="icon-box bg-danger bg-opacity-10 text-danger mx-auto mb-2">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">Variables</h6>
+                        <small class="text-muted d-block">Core Concept #1</small>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card custom-card hover-lift h-100 p-3 text-center">
+                        <div class="icon-box bg-warning bg-opacity-10 text-warning mx-auto mb-2">
+                            <i class="bi bi-input-cursor-text"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">Datatypes</h6>
+                        <small class="text-muted d-block">Core Concept #2</small>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card custom-card hover-lift h-100 p-3 text-center">
+                        <div class="icon-box bg-primary bg-opacity-10 text-primary mx-auto mb-2">
+                            <i class="bi bi-calculator"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">Operators</h6>
+                        <small class="text-muted d-block">Core Concept #3</small>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card custom-card hover-lift h-100 p-3 text-center">
+                        <div class="icon-box bg-info bg-opacity-10 text-info mx-auto mb-2">
+                            <i class="bi bi-gear-wide-connected"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">Method</h6>
+                        <small class="text-muted d-block">Core Concept #4</small>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card custom-card hover-lift h-100 p-3 text-center">
+                        <div class="icon-box bg-success bg-opacity-10 text-success mx-auto mb-2">
+                            <i class="bi bi-diagram-3"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">Control Statements</h6>
+                        <small class="text-muted d-block">Core Concept #5</small>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card custom-card hover-lift h-100 p-3 text-center">
+                        <div class="icon-box bg-danger bg-opacity-10 text-danger mx-auto mb-2">
+                            <i class="bi bi-bounding-box-circles"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">Class & Objects</h6>
+                        <small class="text-muted d-block">Core Concept #6</small>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card custom-card hover-lift h-100 p-3 text-center">
+                        <div class="icon-box bg-purple bg-opacity-10 text-warning mx-auto mb-2">
+                            <i class="bi bi-shield-lock"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">Encapsulation</h6>
+                        <small class="text-muted d-block">Core Concept #7</small>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card custom-card hover-lift h-100 p-3 text-center">
+                        <div class="icon-box bg-primary bg-opacity-10 text-primary mx-auto mb-2">
+                            <i class="bi bi-diagram-2"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">Inheritance</h6>
+                        <small class="text-muted d-block">Core Concept #8</small>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card custom-card hover-lift h-100 p-3 text-center">
+                        <div class="icon-box bg-info bg-opacity-10 text-info mx-auto mb-2">
+                            <i class="bi bi-front"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">Polymorphism</h6>
+                        <small class="text-muted d-block">Core Concept #9</small>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card custom-card hover-lift h-100 p-3 text-center">
+                        <div class="icon-box bg-success bg-opacity-10 text-success mx-auto mb-2">
+                            <i class="bi bi-eye-slash"></i>
+                        </div>
+                        <h6 class="fw-bold mb-1">Abstraction</h6>
+                        <small class="text-muted d-block">Core Concept #10</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Class Section Snippet Sourced from Document -->
+            <div class="card custom-card p-4">
+                <h5 class="fw-bold mb-2"><i class="bi bi-journal-text text-danger me-2"></i> Class Section Overview</h5>
+                <div class="p-3 bg-body-tertiary rounded border font-mono">
+                    <strong>Class:</strong><br>
+                    <span>A class</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 border-top border-secondary border-opacity-25">
+        <div class="container text-center">
+            <p class="mb-1 font-mono small">
+                <i class="bi bi-filetype-java text-danger me-1"></i> <strong>Java Keywords & OOP Explorer</strong> &mdash; Static Front-End Web Application
+            </p>
+            <p class="text-muted small mb-0">
+                Content sourced strictly from <code>Java_OOP_Extracted_Content.md</code>. Built with HTML5, CSS3, Vanilla JS, and Bootstrap 5.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button id="btnBackToTop" class="btn btn-danger" title="Back to top">
+        <i class="bi bi-arrow-up-lg"></i>
+    </button>
+
+    <!-- Copy Toast Notification -->
+    <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
+        <div id="copyToast" class="toast align-items-center text-bg-dark border-0 shadow-lg" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body font-mono">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <span id="toastMessage">Code copied to clipboard!</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Prism Syntax Highlighting JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <!-- Application Script -->
+    <script src="script.js"></script>
+</body>
+</html>
